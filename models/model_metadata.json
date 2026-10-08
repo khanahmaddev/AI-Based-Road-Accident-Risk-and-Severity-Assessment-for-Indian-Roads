@@ -1,0 +1,225 @@
+{
+  "best_model": "Random Forest",
+  "label_map": {
+    "minor": 0,
+    "major": 1,
+    "fatal": 2
+  },
+  "inv_label_map": {
+    "0": "minor",
+    "1": "major",
+    "2": "fatal"
+  },
+  "feature_names": [
+    "cat__road_type_highway",
+    "cat__road_type_rural",
+    "cat__road_type_urban",
+    "cat__weather_clear",
+    "cat__weather_fog",
+    "cat__weather_rain",
+    "cat__visibility_high",
+    "cat__visibility_low",
+    "cat__visibility_medium",
+    "cat__traffic_density_high",
+    "cat__traffic_density_low",
+    "cat__traffic_density_medium",
+    "cat__traffic_signal_0",
+    "cat__traffic_signal_1",
+    "cat__is_weekend_0",
+    "cat__is_weekend_1",
+    "cat__is_peak_hour_0",
+    "cat__is_peak_hour_1",
+    "num__hour",
+    "num__lanes",
+    "num__temperature",
+    "num__vehicles_involved"
+  ],
+  "categorical_features": [
+    "road_type",
+    "weather",
+    "visibility",
+    "traffic_density",
+    "traffic_signal",
+    "is_weekend",
+    "is_peak_hour"
+  ],
+  "numerical_features": [
+    "hour",
+    "lanes",
+    "temperature",
+    "vehicles_involved"
+  ],
+  "metrics": {
+    "Random Forest": {
+      "accuracy": 0.39275,
+      "macro_f1": 0.32602746228524443,
+      "macro_precision": 0.3271132168079976,
+      "macro_recall": 0.3268239758625146,
+      "weighted_f1": 0.400102145579149,
+      "confusion_matrix": [
+        [
+          1084,
+          730,
+          391
+        ],
+        [
+          606,
+          389,
+          203
+        ],
+        [
+          303,
+          196,
+          98
+        ]
+      ],
+      "classification_report": {
+        "minor": {
+          "precision": 0.5439036628198696,
+          "recall": 0.49160997732426304,
+          "f1-score": 0.5164363982848976,
+          "support": 2205.0
+        },
+        "major": {
+          "precision": 0.29581749049429656,
+          "recall": 0.32470784641068445,
+          "f1-score": 0.3095901313171508,
+          "support": 1198.0
+        },
+        "fatal": {
+          "precision": 0.1416184971098266,
+          "recall": 0.16415410385259632,
+          "f1-score": 0.15205585725368503,
+          "support": 597.0
+        },
+        "accuracy": 0.39275,
+        "macro avg": {
+          "precision": 0.3271132168079976,
+          "recall": 0.3268239758625146,
+          "f1-score": 0.32602746228524443,
+          "support": 4000.0
+        },
+        "weighted avg": {
+          "precision": 0.40956079322613653,
+          "recall": 0.39275,
+          "f1-score": 0.400102145579149,
+          "support": 4000.0
+        }
+      }
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.53825,
+      "macro_f1": 0.25428893514706113,
+      "macro_precision": 0.38039404232000046,
+      "macro_recall": 0.33124249003298434,
+      "weighted_f1": 0.4033073218046166,
+      "confusion_matrix": [
+        [
+          2112,
+          89,
+          4
+        ],
+        [
+          1159,
+          39,
+          0
+        ],
+        [
+          572,
+          23,
+          2
+        ]
+      ],
+      "classification_report": {
+        "minor": {
+          "precision": 0.5495706479313037,
+          "recall": 0.9578231292517007,
+          "f1-score": 0.6984126984126984,
+          "support": 2205.0
+        },
+        "major": {
+          "precision": 0.2582781456953642,
+          "recall": 0.0325542570951586,
+          "f1-score": 0.05782060785767235,
+          "support": 1198.0
+        },
+        "fatal": {
+          "precision": 0.3333333333333333,
+          "recall": 0.0033500837520938024,
+          "f1-score": 0.006633499170812604,
+          "support": 597.0
+        },
+        "accuracy": 0.53825,
+        "macro avg": {
+          "precision": 0.38039404232000046,
+          "recall": 0.33124249003298434,
+          "f1-score": 0.25428893514706113,
+          "support": 4000.0
+        },
+        "weighted avg": {
+          "precision": 0.4300551243078928,
+          "recall": 0.53825,
+          "f1-score": 0.4033073218046166,
+          "support": 4000.0
+        }
+      }
+    },
+    "XGBoost": {
+      "accuracy": 0.5405,
+      "macro_f1": 0.25310812427296153,
+      "macro_precision": 0.38335490239223863,
+      "macro_recall": 0.33194171867061717,
+      "weighted_f1": 0.4033037534857445,
+      "confusion_matrix": [
+        [
+          2124,
+          79,
+          2
+        ],
+        [
+          1161,
+          37,
+          0
+        ],
+        [
+          573,
+          23,
+          1
+        ]
+      ],
+      "classification_report": {
+        "minor": {
+          "precision": 0.5505443234836703,
+          "recall": 0.963265306122449,
+          "f1-score": 0.7006432459178624,
+          "support": 2205.0
+        },
+        "major": {
+          "precision": 0.26618705035971224,
+          "recall": 0.030884808013355594,
+          "f1-score": 0.055347793567688854,
+          "support": 1198.0
+        },
+        "fatal": {
+          "precision": 0.3333333333333333,
+          "recall": 0.0016750418760469012,
+          "f1-score": 0.0033333333333333335,
+          "support": 597.0
+        },
+        "accuracy": 0.5405,
+        "macro avg": {
+          "precision": 0.38335490239223863,
+          "recall": 0.33194171867061717,
+          "f1-score": 0.25310812427296153,
+          "support": 4000.0
+        },
+        "weighted avg": {
+          "precision": 0.43296057990310716,
+          "recall": 0.5405,
+          "f1-score": 0.4033037534857445,
+          "support": 4000.0
+        }
+      }
+    }
+  }
+}
